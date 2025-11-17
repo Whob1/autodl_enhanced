@@ -1,0 +1,813 @@
+[
+    {
+        "name": ".claude",
+        "path": "/home/jace/autodl_enhanced/.claude",
+        "level": 0,
+        "type": "directory"
+    },
+    {
+        "name": "settings.local.json",
+        "path": "/home/jace/autodl_enhanced/.claude/settings.local.json",
+        "level": 1,
+        "type": "file",
+        "language": "JSON",
+        "classes": {},
+        "functions": [],
+        "constants": [],
+        "imports": [],
+        "description": "",
+        "hash": "050ea8191024770c7c53a4b6e3ccb50394d3360556a6fda038daa0242706e7be"
+    },
+    {
+        "name": "__pycache__",
+        "path": "/home/jace/autodl_enhanced/__pycache__",
+        "level": 0,
+        "type": "directory"
+    },
+    {
+        "name": "config",
+        "path": "/home/jace/autodl_enhanced/config",
+        "level": 0,
+        "type": "directory"
+    },
+    {
+        "name": "data",
+        "path": "/home/jace/autodl_enhanced/data",
+        "level": 0,
+        "type": "directory"
+    },
+    {
+        "name": "cookies",
+        "path": "/home/jace/autodl_enhanced/data/cookies",
+        "level": 1,
+        "type": "directory"
+    },
+    {
+        "name": "cookies.txt",
+        "path": "/home/jace/autodl_enhanced/data/cookies/cookies.txt",
+        "level": 2,
+        "type": "file",
+        "language": "Text",
+        "classes": {},
+        "functions": [],
+        "constants": [],
+        "imports": [],
+        "description": "",
+        "hash": "5a8f7548f9772e467e8aba53ab6ceebc099cd28ece9d6e9d4932126a03842c4f"
+    },
+    {
+        "name": "logs",
+        "path": "/home/jace/autodl_enhanced/data/logs",
+        "level": 1,
+        "type": "directory"
+    },
+    {
+        "name": "autodl-bot.log.1",
+        "path": "/home/jace/autodl_enhanced/data/logs/autodl-bot.log.1",
+        "level": 2,
+        "type": "file",
+        "language": null
+    },
+    {
+        "name": "autodl-bot.log.2",
+        "path": "/home/jace/autodl_enhanced/data/logs/autodl-bot.log.2",
+        "level": 2,
+        "type": "file",
+        "language": null
+    },
+    {
+        "name": "autodl-bot.log.3",
+        "path": "/home/jace/autodl_enhanced/data/logs/autodl-bot.log.3",
+        "level": 2,
+        "type": "file",
+        "language": null
+    },
+    {
+        "name": "autodl-bot.log.4",
+        "path": "/home/jace/autodl_enhanced/data/logs/autodl-bot.log.4",
+        "level": 2,
+        "type": "file",
+        "language": null
+    },
+    {
+        "name": "autodl-bot.log.5",
+        "path": "/home/jace/autodl_enhanced/data/logs/autodl-bot.log.5",
+        "level": 2,
+        "type": "file",
+        "language": null
+    },
+    {
+        "name": "queue",
+        "path": "/home/jace/autodl_enhanced/data/queue",
+        "level": 1,
+        "type": "directory"
+    },
+    {
+        "name": "scripts",
+        "path": "/home/jace/autodl_enhanced/scripts",
+        "level": 0,
+        "type": "directory"
+    },
+    {
+        "name": "install.sh",
+        "path": "/home/jace/autodl_enhanced/scripts/install.sh",
+        "level": 1,
+        "type": "file",
+        "language": "Shell",
+        "classes": {},
+        "functions": [],
+        "constants": [],
+        "imports": [],
+        "description": "",
+        "hash": "80721c7a680a5e07103ecc228ffba3c705def828bf5ff024f913eb55e2d730a0"
+    },
+    {
+        "name": "src",
+        "path": "/home/jace/autodl_enhanced/src",
+        "level": 0,
+        "type": "directory"
+    },
+    {
+        "name": "__pycache__",
+        "path": "/home/jace/autodl_enhanced/src/__pycache__",
+        "level": 1,
+        "type": "directory"
+    },
+    {
+        "name": "handlers",
+        "path": "/home/jace/autodl_enhanced/src/handlers",
+        "level": 1,
+        "type": "directory"
+    },
+    {
+        "name": "__pycache__",
+        "path": "/home/jace/autodl_enhanced/src/handlers/__pycache__",
+        "level": 2,
+        "type": "directory"
+    },
+    {
+        "name": "__init__.py",
+        "path": "/home/jace/autodl_enhanced/src/handlers/__init__.py",
+        "level": 2,
+        "type": "file",
+        "language": "Python",
+        "classes": {},
+        "functions": [],
+        "constants": [],
+        "imports": [],
+        "description": "Package for Telegram handlers.",
+        "hash": "42693e503a9b94fafa49ef32ec70d48a10614743f86cf0085457970c505bf78b"
+    },
+    {
+        "name": "command_handler.py",
+        "path": "/home/jace/autodl_enhanced/src/handlers/command_handler.py",
+        "level": 2,
+        "type": "file",
+        "language": "Python",
+        "hash": "84a503d0638e7574825dd8699fa1caf999d43f81763b3bbf557fa7e1f1dca03e",
+        "description": "Handles Telegram bot commands like /start, /queue, /status, /pause, /resume, and /clear using bot_data objects.",
+        "developer_consideration": "Relies on application.bot_data for queue_manager and download_manager; handlers must ensure these are properly initialized before command execution.",
+        "imports": [
+            "__future__.annotations",
+            "asyncio",
+            "typing.Any",
+            "typing.Dict",
+            "telegram.Update",
+            "telegram.ext.ContextTypes",
+            "utils.performance",
+            "utils.cookie_manager.CookieManager"
+        ],
+        "functions": [],
+        "maintenance_flag": "Stable",
+        "critical_dependencies": "{\"telegram\": \"Provides core Telegram bot functionality and update handling.\", \"utils.performance\": \"Used for retrieving system performance metrics in /status command.\", \"utils.cookie_manager.CookieManager\": \"Required for cookie management in download operations.\"}",
+        "architectural_role": "Service Layer",
+        "code_quality_score": 8,
+        "refactoring_suggestions": "\"Consider implementing a command registry pattern to dynamically load handlers and reduce repetitive boilerplate code.\"",
+        "security_assessment": "\"Ensure that command handlers validate user permissions before executing privileged operations like /pause or /resume.\""
+    },
+    {
+        "name": "message_handler.py",
+        "path": "/home/jace/autodl_enhanced/src/handlers/message_handler.py",
+        "level": 2,
+        "type": "file",
+        "language": "Python",
+        "hash": "28b921bd97d801cc34de360a7987eca06488da51333dbc498e349014412a8373",
+        "description": "Handles Telegram message events, extracting URLs from text and .txt document uploads for queue processing.",
+        "developer_consideration": "Text files are processed line-by-line, but only the first 1000 lines are considered to prevent memory exhaustion from large files.",
+        "imports": [
+            "__future__.annotations",
+            "typing.List",
+            "telegram.Update",
+            "telegram.Document",
+            "telegram.ext.ContextTypes",
+            "utils.validators",
+            "download_manager.is_playlist_url",
+            "download_manager.extract_playlist_urls",
+            "utils.cookie_manager.CookieManager",
+            "pathlib.Path",
+            "tempfile",
+            "logging"
+        ],
+        "functions": [],
+        "maintenance_flag": "Volatile",
+        "critical_dependencies": "{\"telegram\": \"Provides core Telegram bot functionality including Update and Context objects.\", \"download_manager\": \"Required for playlist URL detection and extraction capabilities.\"}",
+        "architectural_role": "Service Layer",
+        "code_quality_score": 7,
+        "refactoring_suggestions": "\"Add input validation for file sizes and line counts to prevent potential DoS attacks through malformed or excessively large text files.\"",
+        "security_assessment": "\"Ensure that uploaded .txt files are sanitized and that URL extraction doesn't inadvertently expose sensitive information or allow command injection.\""
+    },
+    {
+        "name": "utils",
+        "path": "/home/jace/autodl_enhanced/src/utils",
+        "level": 1,
+        "type": "directory"
+    },
+    {
+        "name": "__pycache__",
+        "path": "/home/jace/autodl_enhanced/src/utils/__pycache__",
+        "level": 2,
+        "type": "directory"
+    },
+    {
+        "name": "__init__.py",
+        "path": "/home/jace/autodl_enhanced/src/utils/__init__.py",
+        "level": 2,
+        "type": "file",
+        "language": "Python",
+        "classes": {},
+        "functions": [],
+        "constants": [],
+        "imports": [],
+        "description": "Utility functions used throughout the project.",
+        "hash": "f2eb834b5e2ef26724cb7e88d291235e240b2f84e5a4d79598961e5e2f3838ce"
+    },
+    {
+        "name": "cookie_manager.py",
+        "path": "/home/jace/autodl_enhanced/src/utils/cookie_manager.py",
+        "level": 2,
+        "type": "file",
+        "language": "Python",
+        "hash": "12591d432070f80ab44a15702543b896372e0cd4f36148b6267c644cd6ee9db4",
+        "description": "Cookie management utilities for yt-dlp. Handles reading, merging, and appending cookies in Netscape format.",
+        "developer_consideration": "Cookie files are parsed line-by-line without validation; malformed entries may cause yt-dlp to fail silently during downloads.",
+        "imports": [
+            "os",
+            "pathlib.Path",
+            "typing.Optional",
+            "typing.Set",
+            "typing.Tuple",
+            "logging"
+        ],
+        "functions": [],
+        "maintenance_flag": "Stable",
+        "critical_dependencies": "{\"os\": \"Required for file system operations like checking if cookie files exist and reading their contents.\", \"pathlib.Path\": \"Used for robust path manipulation and file location handling across different operating systems.\"}",
+        "architectural_role": "Utility",
+        "code_quality_score": 7,
+        "refactoring_suggestions": "\"Add input validation for cookie file formats and implement a try-except block around file operations to gracefully handle permission errors or corrupted files.\"",
+        "security_assessment": "\"Cookie files contain authentication tokens; ensure they are stored with appropriate file permissions (600) and never logged or exposed in error messages.\""
+    },
+    {
+        "name": "deduplication.py",
+        "path": "/home/jace/autodl_enhanced/src/utils/deduplication.py",
+        "level": 2,
+        "type": "file",
+        "language": "Python",
+        "hash": "848ec59de592349f8ba2b90e088c5712bf00c2cf41807491e8382a6d725c8172",
+        "description": "Provides URL normalization and duplicate detection utilities to prevent downloading the same video multiple times.",
+        "developer_consideration": "URL normalization handles query parameter reordering but may not resolve all canonical URL variations; consider platform-specific URL schemes for better deduplication.",
+        "imports": [
+            "__future__.annotations",
+            "hashlib",
+            "os",
+            "re",
+            "typing.Optional",
+            "typing.Tuple",
+            "urllib.parse.urlparse",
+            "urllib.parse.parse_qs",
+            "urllib.parse.urlencode",
+            "urllib.parse.urlunparse"
+        ],
+        "functions": [
+            "normalize_url",
+            "extract_video_id",
+            "compute_url_hash",
+            "extract_filename_base",
+            "compute_filename_hash",
+            "are_urls_duplicate",
+            "are_filenames_similar"
+        ],
+        "maintenance_flag": "Stable",
+        "critical_dependencies": "{\"hashlib\": \"Used for generating consistent hashes of URLs and filenames to identify duplicates.\"}",
+        "architectural_role": "Utility",
+        "code_quality_score": 8,
+        "refactoring_suggestions": "\"Consider adding a cache layer for computed URL hashes to improve performance during frequent duplicate checks.\"",
+        "security_assessment": "\"None\""
+    },
+    {
+        "name": "disk_monitor.py",
+        "path": "/home/jace/autodl_enhanced/src/utils/disk_monitor.py",
+        "level": 2,
+        "type": "file",
+        "language": "Python",
+        "hash": "3b0dc19181378d77c3b2f64da6d2c8486777eb0289fec8b007c12035374b6fe9",
+        "description": "Provides disk monitoring utilities to check available space and detect low disk conditions in the download directory.",
+        "developer_consideration": "The disk space check uses psutil which may fail silently on systems with restricted filesystem access; implement fallback mechanisms for production deployments.",
+        "imports": [
+            "__future__.annotations",
+            "psutil"
+        ],
+        "functions": [
+            "get_free_space_bytes",
+            "is_low_disk"
+        ],
+        "maintenance_flag": "Stable",
+        "critical_dependencies": "{\"psutil\": \"Provides cross-platform disk space monitoring capabilities essential for the low disk detection logic.\"}",
+        "architectural_role": "Utility",
+        "code_quality_score": 8,
+        "refactoring_suggestions": "\"Add unit tests for edge cases like negative disk space values or invalid paths to improve reliability.\"",
+        "security_assessment": "\"None\""
+    },
+    {
+        "name": "logger.py",
+        "path": "/home/jace/autodl_enhanced/src/utils/logger.py",
+        "level": 2,
+        "type": "file",
+        "language": "Python",
+        "hash": "7ea563a673445ed61def2f891c454e4ba9bb66ef16ad3993678d2878e2ebb9b6",
+        "description": "Provides unified logging configuration with console and file handlers for the Telegram bot application.",
+        "developer_consideration": "The logger setup depends on environment-based LOG_LEVEL; ensure config_manager properly loads this before calling setup_logging to avoid defaulting to WARNING level.",
+        "imports": [
+            "__future__.annotations",
+            "logging",
+            "os",
+            "logging.handlers.RotatingFileHandler"
+        ],
+        "functions": [
+            "setup_logging",
+            "get_logger"
+        ],
+        "maintenance_flag": "Stable",
+        "critical_dependencies": "{\"logging\": \"Core Python module for all logging functionality and handler management.\", \"logging.handlers.RotatingFileHandler\": \"Enables log rotation to prevent excessive disk usage.\"}",
+        "architectural_role": "Utility",
+        "code_quality_score": 8,
+        "refactoring_suggestions": "\"Consider adding log level validation to prevent invalid LOG_LEVEL values from causing unexpected behavior during setup.\"",
+        "security_assessment": "\"None\""
+    },
+    {
+        "name": "performance.py",
+        "path": "/home/jace/autodl_enhanced/src/utils/performance.py",
+        "level": 2,
+        "type": "file",
+        "language": "Python",
+        "hash": "1117536734d15c7558f46c1f8de382840a6b5f06b3aea64ea4dcdc6bb56a7c8c",
+        "description": "System performance monitoring utilities exposing CPU, memory, and disk usage metrics for Telegram bot status reporting.",
+        "developer_consideration": "psutil may raise RuntimeError on some systems with restricted process access; implement graceful fallbacks or error handling in production deployments.",
+        "imports": [
+            "__future__.annotations",
+            "psutil"
+        ],
+        "functions": [
+            "get_cpu_usage",
+            "get_memory_usage",
+            "get_disk_usage"
+        ],
+        "maintenance_flag": "Stable",
+        "critical_dependencies": "{\"psutil\": \"Provides cross-platform system information including CPU, memory, and disk usage metrics essential for performance monitoring.\"}",
+        "architectural_role": "Utility",
+        "code_quality_score": 8,
+        "refactoring_suggestions": "\"Add type hints to function parameters and return values for better IDE support and documentation clarity.\"",
+        "security_assessment": "\"None\""
+    },
+    {
+        "name": "validators.py",
+        "path": "/home/jace/autodl_enhanced/src/utils/validators.py",
+        "level": 2,
+        "type": "file",
+        "language": "Python",
+        "hash": "b17df6aeb5e5d24994c86180d9d487933e8872d0e3e3bd7529834c6540a19eb5",
+        "description": "Validation utilities for the Enhanced AutoDL Telegram Bot, providing URL validation and extraction functionality.",
+        "developer_consideration": "The is_valid_url function uses a basic regex pattern that may not catch all edge cases; consider strengthening validation for production use to prevent malformed URLs from entering the download queue.",
+        "imports": [
+            "__future__.annotations",
+            "re",
+            "urllib.parse.urlparse",
+            "typing.List"
+        ],
+        "functions": [
+            "is_valid_url",
+            "extract_urls"
+        ],
+        "maintenance_flag": "Stable",
+        "critical_dependencies": "{\"re\": \"Provides regular expression matching for URL validation patterns.\", \"urllib.parse\": \"Handles URL parsing and validation of URL components like scheme and netloc.\"}",
+        "architectural_role": "Utility",
+        "code_quality_score": 7,
+        "refactoring_suggestions": "\"Add comprehensive test cases for various URL formats including edge cases like malformed URLs, international domain names, and URLs with special characters to ensure robust validation.\"",
+        "security_assessment": "\"Input validation is crucial for preventing injection attacks; ensure extracted URLs are properly sanitized before being passed to yt-dlp to avoid command injection vulnerabilities.\""
+    },
+    {
+        "name": "__init__.py",
+        "path": "/home/jace/autodl_enhanced/src/__init__.py",
+        "level": 1,
+        "type": "file",
+        "language": "Python",
+        "classes": {},
+        "functions": [],
+        "constants": [],
+        "imports": [],
+        "description": "Enhanced AutoDL Telegram Bot source package.",
+        "hash": "1c347b51c7e3e794014ea3df60d75cc6b6c178ea33b39833a304ba12c58523f9"
+    },
+    {
+        "name": "autodl_bot.py",
+        "path": "/home/jace/autodl_enhanced/src/autodl_bot.py",
+        "level": 1,
+        "type": "file",
+        "language": "Python",
+        "hash": "6d665bba4e2efc3c77c612bc07634dc22e4a29209586ff4647b19f50c188e45b",
+        "description": "Entry point for the Enhanced AutoDL Telegram Bot, orchestrating config loading, logging, queue management, and Telegram bot initialization.",
+        "developer_consideration": "The application's startup sequence is tightly coupled to environment variables and config file parsing; any misconfiguration here will prevent the bot from running entirely.",
+        "imports": [
+            "__future__.annotations",
+            "asyncio",
+            "os",
+            "sys",
+            "telegram.ext.Application",
+            "telegram.ext.CommandHandler",
+            "telegram.ext.MessageHandler",
+            "telegram.ext.filters",
+            "config_manager.load_config",
+            "utils.logger.setup_logging",
+            "utils.logger.get_logger",
+            "queue_manager.QueueManager",
+            "download_manager.DownloadManager",
+            "handlers.command_handler",
+            "handlers.message_handler"
+        ],
+        "functions": [
+            "main"
+        ],
+        "maintenance_flag": "Stable",
+        "critical_dependencies": "{\"telegram.ext.Application\": \"Core Telegram bot framework for handling updates and dispatching events.\", \"config_manager.load_config\": \"Initializes application configuration from environment and file sources.\", \"queue_manager.QueueManager\": \"Manages persistent task queue state and operations.\", \"download_manager.DownloadManager\": \"Handles concurrent downloads and retry logic for queued items.\"}",
+        "architectural_role": "Entrypoint",
+        "code_quality_score": 8,
+        "refactoring_suggestions": "\"Consider separating the bot initialization logic into a dedicated factory function to improve testability and reduce the main function's cognitive load.\"",
+        "security_assessment": "\"The bot relies on environment variables for sensitive data like Telegram tokens; ensure these are properly secured and not exposed in logs or error messages.\""
+    },
+    {
+        "name": "config_manager.py",
+        "path": "/home/jace/autodl_enhanced/src/config_manager.py",
+        "level": 1,
+        "type": "file",
+        "language": "Python",
+        "hash": "ba73761fe1b13d95ad90b331e8186b92e523be671013392b7a88f618238c9ff3",
+        "description": "Loads and validates environment variables for the Enhanced AutoDL Telegram Bot configuration.",
+        "developer_consideration": "Relies on python-dotenv for .env file loading; ensure the .env file exists in the project root or defaults will be used without warning.",
+        "imports": [
+            "os",
+            "dotenv.load_dotenv",
+            "typing.List"
+        ],
+        "functions": [
+            "load_config"
+        ],
+        "maintenance_flag": "Stable",
+        "critical_dependencies": "{\"python-dotenv\": \"Enables loading environment variables from .env files, which is essential for configuration management.\"}",
+        "architectural_role": "Configuration",
+        "code_quality_score": 7,
+        "refactoring_suggestions": "\"Add explicit validation for required environment variables and raise ConfigurationError with descriptive messages for missing or invalid values.\"",
+        "security_assessment": "\"Environment variables containing sensitive data like Telegram tokens should be validated and sanitized to prevent injection attacks; consider implementing a secure loading mechanism.\""
+    },
+    {
+        "name": "download_manager.py",
+        "path": "/home/jace/autodl_enhanced/src/download_manager.py",
+        "level": 1,
+        "type": "file",
+        "language": "Python",
+        "hash": "adb3eceb0f284ce5433b24a6f6a57ac683a5e25025b297756f8f827d6091cb95",
+        "description": "Manages concurrent yt-dlp downloads with pause/resume, retry logic, and real-time progress tracking.",
+        "developer_consideration": "The download manager relies on yt-dlp's internal state management; concurrent downloads may cause race conditions if not properly synchronized with the queue manager's task states.",
+        "imports": [
+            "__future__.annotations",
+            "asyncio",
+            "os",
+            "time",
+            "typing.Dict",
+            "typing.Optional",
+            "yt_dlp.YoutubeDL",
+            "queue_manager.QueueManager",
+            "queue_manager.DownloadTask",
+            "utils.disk_monitor",
+            "utils.logger.get_logger",
+            "config_manager.load_config"
+        ],
+        "functions": [
+            "is_playlist_url"
+        ],
+        "maintenance_flag": "Volatile",
+        "critical_dependencies": "{\"yt-dlp\": \"Core dependency for all download operations; handles URL extraction, format selection, and actual file downloading.\", \"queue_manager.QueueManager\": \"Essential for retrieving download tasks and updating their status; ensures consistent task lifecycle management.\"}",
+        "architectural_role": "Service Layer",
+        "code_quality_score": 7,
+        "refactoring_suggestions": "\"Extract the yt-dlp options configuration into a dedicated function or class to improve testability and allow for easier configuration updates without modifying the core download logic.\"",
+        "security_assessment": "\"Input validation should be strengthened to prevent command injection via malicious URLs; ensure all URLs are properly sanitized before being passed to yt-dlp.\""
+    },
+    {
+        "name": "queue_manager.py",
+        "path": "/home/jace/autodl_enhanced/src/queue_manager.py",
+        "level": 1,
+        "type": "file",
+        "language": "Python",
+        "hash": "28ffa43578291fc0669b03be616d9670a83ca9a62e44346d66e36f253917f977",
+        "description": "SQLite-backed queue manager for the Enhanced AutoDL Telegram Bot, handling persistent task storage with retry logic.",
+        "developer_consideration": "Uses aiosqlite for async database operations; ensure proper connection handling to prevent database locks during concurrent access.",
+        "imports": [
+            "__future__.annotations",
+            "asyncio",
+            "time",
+            "dataclasses.dataclass",
+            "typing.Optional",
+            "typing.List",
+            "typing.Tuple",
+            "aiosqlite",
+            "utils.logger.get_logger",
+            "utils.deduplication.normalize_url",
+            "utils.deduplication.compute_url_hash",
+            "utils.deduplication.extract_video_id"
+        ],
+        "functions": [],
+        "maintenance_flag": "Stable",
+        "critical_dependencies": "{\"aiosqlite\": \"Enables asynchronous SQLite database operations required for non-blocking queue management.\"}",
+        "architectural_role": "Data Model",
+        "code_quality_score": 8,
+        "refactoring_suggestions": "\"Consider adding database schema versioning to handle future migration needs when the queue structure evolves.\"",
+        "security_assessment": "\"Input validation is minimal; ensure all URLs are properly sanitized before insertion to prevent SQL injection in future extensions.\""
+    },
+    {
+        "name": "tests",
+        "path": "/home/jace/autodl_enhanced/tests",
+        "level": 0,
+        "type": "directory"
+    },
+    {
+        "name": "__pycache__",
+        "path": "/home/jace/autodl_enhanced/tests/__pycache__",
+        "level": 1,
+        "type": "directory"
+    },
+    {
+        "name": "__init__.py",
+        "path": "/home/jace/autodl_enhanced/tests/__init__.py",
+        "level": 1,
+        "type": "file",
+        "language": "Python",
+        "classes": {},
+        "functions": [],
+        "constants": [],
+        "imports": [],
+        "description": "Test package for the Enhanced AutoDL Telegram Bot.",
+        "hash": "be77f5f00f463c40397531da3afc5f9584c1fccc1648d667f1ba434b34a76479"
+    },
+    {
+        "name": "test_download_manager.py",
+        "path": "/home/jace/autodl_enhanced/tests/test_download_manager.py",
+        "level": 1,
+        "type": "file",
+        "language": "Python",
+        "hash": "a1c043f2db30d373f581b1356c37e7081a84a2ef82b19aed2a7007de94f30628",
+        "description": "Unit tests for the DownloadManager simulating download success/failure scenarios without actual data fetching.",
+        "developer_consideration": "Relies on monkeypatching to override _download method; test coverage depends entirely on mocked yt-dlp behavior rather than real downloads.",
+        "imports": [
+            "__future__.annotations",
+            "asyncio",
+            "os",
+            "tempfile",
+            "pytest",
+            "autodl_enhanced.src.queue_manager.QueueManager",
+            "autodl_enhanced.src.download_manager.DownloadManager",
+            "autodl_enhanced.src.config_manager.Config"
+        ],
+        "functions": [
+            "create_config"
+        ],
+        "maintenance_flag": "Volatile",
+        "critical_dependencies": "{\"pytest\": \"Provides the testing framework and assertion capabilities for unit testing.\", \"aiosqlite\": \"Required for database operations in the QueueManager under test.\"}",
+        "architectural_role": "Test Suite",
+        "code_quality_score": 7,
+        "refactoring_suggestions": "\"Add parameterized tests for different download failure scenarios to improve coverage of error handling paths in DownloadManager.\"",
+        "security_assessment": "\"None - tests only simulate download behavior and do not process external inputs or interact with real systems.\""
+    },
+    {
+        "name": "test_queue_manager.py",
+        "path": "/home/jace/autodl_enhanced/tests/test_queue_manager.py",
+        "level": 1,
+        "type": "file",
+        "language": "Python",
+        "hash": "edb07f5b81fb59c3a543cc74a976f6ab1d502762662503449fd9a20993ea4bb2",
+        "description": "Unit tests for the QueueManager, verifying SQLite-backed queue operations with temporary database files.",
+        "developer_consideration": "Uses temporary database files to prevent data clobbering; tests must properly clean up these temp files to avoid disk space accumulation.",
+        "imports": [
+            "__future__.annotations",
+            "asyncio",
+            "os",
+            "tempfile",
+            "pytest",
+            "autodl_enhanced.src.queue_manager.QueueManager"
+        ],
+        "functions": [],
+        "maintenance_flag": "Stable",
+        "critical_dependencies": "{\"aiosqlite\": \"Enables async SQLite operations for queue persistence; essential for test isolation and database interaction.\"}",
+        "architectural_role": "Test Suite",
+        "code_quality_score": 8,
+        "refactoring_suggestions": "\"Consider parameterizing test cases with different queue states and operations to improve coverage without duplicating test logic.\"",
+        "security_assessment": "\"None - tests operate on temporary files and don't handle sensitive data; however, ensure temp file permissions are secure to prevent unauthorized access.\""
+    },
+    {
+        "name": "venv",
+        "path": "/home/jace/autodl_enhanced/venv",
+        "level": 0,
+        "type": "directory"
+    },
+    {
+        "name": "ARCHITECTURE.md",
+        "path": "/home/jace/autodl_enhanced/ARCHITECTURE.md",
+        "level": 0,
+        "type": "file",
+        "language": "Markdown",
+        "classes": {},
+        "functions": [],
+        "constants": [],
+        "imports": [],
+        "description": "",
+        "hash": "0fe65714b93031abc79f9eb8a6faf94683d6f216f8c54845e93eec8df721942c"
+    },
+    {
+        "name": "COMPONENTS.md",
+        "path": "/home/jace/autodl_enhanced/COMPONENTS.md",
+        "level": 0,
+        "type": "file",
+        "language": "Markdown",
+        "classes": {},
+        "functions": [],
+        "constants": [],
+        "imports": [],
+        "description": "",
+        "hash": "42046ff8dc5c99cb8c381045546190d0e9c9deaeba4c96f6fbcba1782137c2e5"
+    },
+    {
+        "name": "README.md",
+        "path": "/home/jace/autodl_enhanced/README.md",
+        "level": 0,
+        "type": "file",
+        "language": "Markdown",
+        "classes": {},
+        "functions": [],
+        "constants": [],
+        "imports": [],
+        "description": "",
+        "hash": "3e9efb9d8fe236c669e4907f196e8f66477fdf187b4316c583a6ddbb73109e3a"
+    },
+    {
+        "name": "autodl_enhanced.zip",
+        "path": "/home/jace/autodl_enhanced/autodl_enhanced.zip",
+        "level": 0,
+        "type": "file",
+        "language": null
+    },
+    {
+        "name": "autodl_enhanced_20251020_075150.zip",
+        "path": "/home/jace/autodl_enhanced/autodl_enhanced_20251020_075150.zip",
+        "level": 0,
+        "type": "file",
+        "language": null
+    },
+    {
+        "name": "debug_queue.py",
+        "path": "/home/jace/autodl_enhanced/debug_queue.py",
+        "level": 0,
+        "type": "file",
+        "language": "Python",
+        "hash": "7c2940840580b542d40584601ae0187679977ed85df0afe3fcd98c2faf12eb0e",
+        "description": "Debug script to inspect and display the current state and contents of the SQLite download queue database.",
+        "developer_consideration": "Direct database access bypasses normal queue manager operations; changes made directly to the database may cause inconsistencies with the application's internal state tracking.",
+        "imports": [
+            "asyncio",
+            "os",
+            "sys",
+            "sqlite3",
+            "datetime.datetime",
+            "config_manager.load_config"
+        ],
+        "functions": [],
+        "maintenance_flag": "Stable",
+        "critical_dependencies": "{\"config_manager\": \"Provides database path configuration needed to locate and access the SQLite queue database file.\"}",
+        "architectural_role": "Utility Script",
+        "code_quality_score": 6,
+        "refactoring_suggestions": "\"Add proper error handling for database connection failures and implement a more robust display format for queue entries that includes task metadata and status information.\"",
+        "security_assessment": "\"None\""
+    },
+    {
+        "name": "requirements.txt",
+        "path": "/home/jace/autodl_enhanced/requirements.txt",
+        "level": 0,
+        "type": "file",
+        "language": "Text",
+        "classes": {},
+        "functions": [],
+        "constants": [],
+        "imports": [],
+        "description": "",
+        "hash": "194c2c70e6768a1023d624d4d347e47ffcb98a8e0928872ebe5fa060decf0b88"
+    },
+    {
+        "name": "test_download.py",
+        "path": "/home/jace/autodl_enhanced/test_download.py",
+        "level": 0,
+        "type": "file",
+        "language": "Python",
+        "hash": "534d183f7f9ab26ac9e114c1bcd4d042d039a96b48bd7edca13fca37f8c0b421",
+        "description": "Test script to add a URL to the download queue for manual verification of queue functionality.",
+        "developer_consideration": "Directly manipulates the queue database without going through the normal bot command flow; changes are immediately visible in the queue but bypass standard validation and deduplication logic.",
+        "imports": [
+            "asyncio",
+            "os",
+            "sys",
+            "config_manager.load_config",
+            "queue_manager.QueueManager"
+        ],
+        "functions": [],
+        "maintenance_flag": "Volatile",
+        "critical_dependencies": "{\"src.config_manager\": \"Loads configuration needed for database path and queue settings.\", \"src.queue_manager\": \"Provides the queue management interface for adding items to the download queue.\"}",
+        "architectural_role": "Test Utility",
+        "code_quality_score": 6,
+        "refactoring_suggestions": "\"Add input validation and URL normalization before queue insertion to match production behavior and improve test reliability.\"",
+        "security_assessment": "\"None - this is a test script that directly accesses the queue database and does not process external inputs or handle sensitive data.\""
+    },
+    {
+        "name": "test_playlist.py",
+        "path": "/home/jace/autodl_enhanced/test_playlist.py",
+        "level": 0,
+        "type": "file",
+        "language": "Python",
+        "hash": "714e2d714b1e52251fcdcf4e116741db61ac50b57f66458df21c2f0907705fce",
+        "description": "Test script to add a playlist URL to the download queue for manual verification of playlist processing functionality.",
+        "developer_consideration": "Bypasses normal bot command validation and deduplication logic; directly manipulates the queue database which may cause state inconsistencies if not properly synchronized with the application's internal queue manager.",
+        "imports": [
+            "asyncio",
+            "os",
+            "sys",
+            "download_manager.is_playlist_url",
+            "download_manager.extract_playlist_urls"
+        ],
+        "functions": [],
+        "maintenance_flag": "Volatile",
+        "critical_dependencies": "{\"src.download_manager\": \"Provides playlist URL detection and extraction utilities essential for test functionality.\"}",
+        "architectural_role": "Test Script",
+        "code_quality_score": 6,
+        "refactoring_suggestions": "\"Convert to proper unit test using pytest fixtures to mock queue manager dependencies and ensure test isolation without direct database manipulation.\"",
+        "security_assessment": "\"Direct database access could expose the application to data integrity issues; ensure proper transaction handling and validation before inserting test data.\""
+    },
+    {
+        "name": "test_playlist_extraction.py",
+        "path": "/home/jace/autodl_enhanced/test_playlist_extraction.py",
+        "level": 0,
+        "type": "file",
+        "language": "Python",
+        "hash": "2aae9a667937fd96966743d43e58c71e641ef11574f6847dd0c032a909d6aac3",
+        "description": "Test script for debugging playlist extraction functionality with yt-dlp.",
+        "developer_consideration": "Directly imports and uses yt-dlp's extract_info method without the application's queue or validation layers; may not reflect real-world behavior accurately.",
+        "imports": [
+            "asyncio",
+            "sys",
+            "os"
+        ],
+        "functions": [],
+        "maintenance_flag": "Volatile",
+        "critical_dependencies": "{\"yt_dlp\": \"Provides core playlist extraction and URL information parsing capabilities essential for this test script's functionality.\"}",
+        "architectural_role": "Test Utility",
+        "code_quality_score": 4,
+        "refactoring_suggestions": "\"Add proper error handling and logging around yt-dlp calls to make debugging more effective; consider parameterizing the test URL for easier reuse.\"",
+        "security_assessment": "\"Script directly executes yt-dlp on provided URLs without validation; could be exploited if run with untrusted input to execute arbitrary commands or access unauthorized resources.\""
+    },
+    {
+        "name": "test_playlist_simple.py",
+        "path": "/home/jace/autodl_enhanced/test_playlist_simple.py",
+        "level": 0,
+        "type": "file",
+        "language": "Python",
+        "hash": "fd16ec5e23c60a85887a761397faac69170a59133c478e88240f45f8c06a535c",
+        "description": "Simple test script for detecting and extracting playlist URLs using yt-dlp's extraction capabilities.",
+        "developer_consideration": "Bypasses application validation and deduplication layers; direct yt-dlp integration may expose underlying library limitations or unexpected behavior in edge cases.",
+        "imports": [
+            "asyncio",
+            "yt_dlp.YoutubeDL"
+        ],
+        "functions": [
+            "is_playlist_url"
+        ],
+        "maintenance_flag": "Volatile",
+        "critical_dependencies": "{\"yt_dlp\": \"Primary dependency for URL playlist detection and metadata extraction; directly impacts test accuracy and reliability.\"}",
+        "architectural_role": "Test Utility",
+        "code_quality_score": 6,
+        "refactoring_suggestions": "\"Add input validation and error handling for yt-dlp extraction to make the script more robust against malformed URLs or network issues.\"",
+        "security_assessment": "\"Direct yt-dlp usage without application-level validation may process untrusted URLs; ensure proper sandboxing or input sanitization if used in production contexts.\""
+    }
+]
